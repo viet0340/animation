@@ -1,0 +1,131 @@
+body {
+    background: #000;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 100px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #b4b4b4;
+    box-sizing: border-box;
+}
+
+div#spin {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 4px solid #b4b4b4;
+    box-sizing: border-box;
+    animation-name: loadingSpin;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+}
+
+div#spin::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 28px;
+    height: 28px;
+    top: 50%;
+    left: 50%;
+    border: 3px solid #b4b4b4;
+    box-sizing: border-box;
+    animation-name: loadingSpin2;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -moz-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    -o-transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 30%;
+    -webkit-border-radius: 30%;
+    -moz-border-radius: 30%;
+    -ms-border-radius: 30%;
+    -o-border-radius: 30%;
+}
+
+div#spin::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #b4b4b4;
+    box-sizing: border-box;
+    animation-name: loadingSpin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translate(-50%, -50%) rotate(0deg);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -moz-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    -o-transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+}
+
+@keyframes loadingSpin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+        -webkit-transform: translate(-50%, -50%) rotate(0deg);
+        -moz-transform: translate(-50%, -50%) rotate(0deg);
+        -ms-transform: translate(-50%, -50%) rotate(0deg);
+        -o-transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        -moz-transform: translate(-50%, -50%) rotate(360deg);
+        -ms-transform: translate(-50%, -50%) rotate(360deg);
+        -o-transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes loadingSpin2 {
+    from {
+        transform: translate(-50%, -50%) rotate(45deg);
+        -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -moz-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+        -o-transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(205deg);
+        -webkit-transform: translate(-50%, -50%) rotate(205deg);
+        -moz-transform: translate(-50%, -50%) rotate(205deg);
+        -ms-transform: translate(-50%, -50%) rotate(205deg);
+        -o-transform: translate(-50%, -50%) rotate(205deg);
+    }
+}
